@@ -4,14 +4,14 @@ import React from 'react'
 import { ThemeProvider, Provider } from '@habx/ui-core'
 
 import { client } from './api/apollo'
-import Setup from './Setup'
+import { SetupProvider } from './Setup/components/SetupProvider'
 
 const App = () => {
   return (
     <ThemeProvider>
       <Provider>
         <ApolloProvider client={client}>
-          <Setup />
+          <SetupProvider />
         </ApolloProvider>
       </Provider>
     </ThemeProvider>
